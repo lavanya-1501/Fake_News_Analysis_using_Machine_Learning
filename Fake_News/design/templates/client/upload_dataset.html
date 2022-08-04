@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+{% extends 'client/design.html' %}
+{% block userblock %}
+{% load staticfiles %}
+
+
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Federo&family=Josefin+Sans:wght@200&family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body{
+    /*background: url("images/a8.webp");
+    background-size: cover;*/
+    }
+        .menu table{
+          width:100%;
+          text-align:center;
+
+          }
+          .menu table td:hover{
+          background:rgba(0,0,155,0.2);
+
+          }
+          .menu table td{
+             border: 4px solid #778ba5;
+             background: rgb(119,139,165);
+             background-repeat: no-repeat;
+
+         }
+          .menu table,.menu table th,.menu table td {
+            border: ;
+            border-collapse: collapse;
+
+}
+.menu table th,.menu table  td {
+    padding: 10px;
+
+    }
+
+    table tr td.upload_dataset{
+  border: 4px solid #2E86C1;
+    background: rgb(46, 134, 193);
+}   
+
+
+          h1{
+            font-family: 'Federo', sans-serif;
+          color:white;
+         /* color:black;*/
+          padding:10px;
+          text-align:center;
+          border-style:none;
+        /*  height:100px;*/
+        /*  width:1330px;*/
+          /*float:left;*/
+
+
+          }
+          .mainholder{
+
+          position:relative;
+          top:50px;
+          left:90px;
+          z-index:999;
+          float:left;
+          }
+
+.mask{
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+}  
+
+.btn-icon{
+  float: left;
+  background-color: #009999; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  margin-top: 4px;
+}
+
+.btn-icon:hover {
+  background-color: RoyalBlue;
+}
+
+    .viewdetails{
+    position: relative;
+     /*  top: -34px;*/
+
+    margin-left:-25px;
+    padding:13px;
+    width:1337px;
+    height: 600px;
+    overflow:auto;
+    text-align: center;
+}
+
+
+
+.viewdetails table tr th{
+    color:white;
+}
+.viewdetails table tr th{
+background:#007f66;
+padding:10px;
+}
+.viewdetails table tr td{
+background-color:rgb(195, 199, 200);
+padding:10px;
+}
+.viewdetails table tr:hover td{
+background:rgba(237, 236, 234);
+}
+
+    </style>
+
+
+     
+
+
+   
+<body>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+</body>
+</html>
+
+

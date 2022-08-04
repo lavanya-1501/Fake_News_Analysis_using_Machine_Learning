@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>    
+<style>
+body {
+    background: url("{% static 'a2.webp' %}");
+    background-size: cover;
+    font-family: 'Federo', sans-serif;
+    color:#2e3d49;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 3px 0 rgba(117, 124, 129, 0.12);
+}
+
+h1 {
+    font-family: 'Federo', sans-serif;
+    color:white;
+    padding:10px;
+    text-align:center;
+    border-style:none;
+}
+
+h3 {
+    color:#E5E7E9;
+}  
+
+input {
+    padding: ;
+    border-radius:5px;
+    margin:10px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Federo', sans-serif;
+}
+
+table {
+    display: table;
+    font-family: 'Federo', sans-serif;
+    font-size: 19px;
+    border-collapse: separate;
+    border-spacing: 12px;
+    border-color: #2e3d49;
+    margin-left: 4px;
+    color: white;
+}
+    
+.mask {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.6);
+}  
+
+
+.btn {
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: bold;
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    font-family: 'Federo', sans-serif;
+    background-color: #f6eabe;
+}
+
+.btn:hover {
+    background-color: #555555;
+    color: white;
+}   
+
+.btn-icon{
+    float: left;
+    background-color: #009999; 
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    margin-top: 1px;
+}
+
+.btn-icon:hover {
+    background-color: RoyalBlue;
+}
+</style>
+
+<body>
+<center>
+    <div class="mask">
+    <h1>
+        <button class="btn-icon"><a href="{% url 'login' %}"><i class="fa fa-home"></i></a></button>
+        Fake News Analysis using Machine Learning
+    </h1>
+    </div>
+    <h3>Register Here</h3>  
+    <form method="POST"  enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="imga">
+    <table id="customers">
+        <tr>
+            <td>FIRST NAME</td>
+            <td>{{ form.firstname }}</td>
+        </tr>
+         <tr>
+            <td>LAST NAME</td>
+            <td>{{ form.lastname }}</td>
+        </tr>
+        <tr>
+            <td>USERID</td>
+            <td>{{ form.userid }}</td>
+        </tr>
+        <tr>
+            <td>PASSWORD</td>
+            <td>{{ form.password }}</td>
+        </tr>
+        <tr>
+            <td>PHONE NUMBER</td>
+            <td>{{ form.phoneno }}</td>
+        </tr>
+        <tr>
+            <td>EMAIL</td>
+            <td>{{ form.email}}</td>
+        </tr>
+        <tr>
+            <td>GENDER</td>
+            <td>{{ form.gender }}</td>
+        </tr>   
+        <tr>           
+            <td><input type="reset" class="btn"></td>
+            <td><input type="submit" class="btn"></td>
+        </tr>
+    </table> 
+    </div>
+    </form>
+</center>
+</body>
+</html>
+
+      
+       
